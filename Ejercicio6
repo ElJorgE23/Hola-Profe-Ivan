@@ -1,0 +1,15 @@
+outliers :: [Double] -> [Double]
+outliers numbers = filter isOutlier numbers
+    where
+        isOutlier x = abs ((x - mean) / stdDev) > 3
+        mean = sum numbers / fromIntegral (length numbers)
+        stdDev = sqrt (sum (map (\num -> (num - mean)^2) numbers) / fromIntegral (length numbers))
+
+main :: IO ()
+main = do
+
+    input <- getLine
+    let sample = map read (words input) :: [Double]
+    
+    let outliersList = outliers sample
+    print outliersList
