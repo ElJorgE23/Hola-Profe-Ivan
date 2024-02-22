@@ -1,0 +1,9 @@
+duplicarElementos :: [Int] -> [Int]
+duplicarElementos lista = concatMap (\x -> [x, x]) lista
+
+-- Ejemplo de uso
+main :: IO ()
+main = do
+  let ejemploLista = [1, 2, 3, 4, 5]
+  putStrLn $ "Lista original: " ++ show ejemploLista
+  putStrLn $ "Duplicar elementos: " ++ show (duplicarElementos ejemploLista)
