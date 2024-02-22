@@ -1,0 +1,7 @@
+filtrarPares :: [Int] -> [Int]
+filtrarPares lista = filter even lista
+main :: IO ()
+main = do
+  let ejemploLista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  putStrLn $ "Lista original: " ++ show ejemploLista
+  putStrLn $ "Elementos pares filtrados: " ++ show (filtrarPares ejemploLista)
