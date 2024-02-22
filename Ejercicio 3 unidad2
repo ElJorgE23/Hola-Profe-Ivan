@@ -1,0 +1,6 @@
+numerosPares :: Int -> [Int]
+numerosPares n = [x | x <- [2,4..n]]
+main :: IO ()
+main = do
+  let limite = 10
+  putStrLn $ "Números pares hasta " ++ show limite ++ ": " ++ show (numerosPares limite)
