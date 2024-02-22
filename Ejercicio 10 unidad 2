@@ -1,0 +1,7 @@
+esPalindromo :: String -> Bool
+esPalindromo str = str == reverse str
+
+main :: IO ()
+main = do
+  let ejemploPalindromo = "anita lava la tina"
+  putStrLn $ "¿'" ++ ejemploPalindromo ++ "' es un palíndromo? " ++ show (esPalindromo ejemploPalindromo)
