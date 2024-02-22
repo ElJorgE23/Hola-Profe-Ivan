@@ -1,0 +1,7 @@
+longitudCadena :: String -> Int
+longitudCadena cadena = length cadena
+
+main :: IO ()
+main = do
+  let ejemploCadena = "Hola, Haskell"
+  putStrLn $ "Longitud de la cadena '" ++ ejemploCadena ++ "': " ++ show (longitudCadena ejemploCadena)
